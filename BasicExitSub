@@ -1,0 +1,7 @@
+    Public Sub ExitApplication()
+        Dim a As MsgBoxResult = MsgBox("Are you sure you want to exit the applcation", vbYesNo)
+        If a = vbYes Then
+            Application.Exit()
+        Else
+        End If
+    End Sub
