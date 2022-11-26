@@ -1,0 +1,19 @@
+    Public Sub FilePath()
+        fullpath = Application.StartupPath
+        MsgBox(fullpath)
+    End Sub
+    
+    Public Sub setfilelocations()  
+
+        fileloc_user = fullpath & "\Users.txt"
+
+        If Dir$(fileloc_user) = "" Then
+
+            Dim sw As New System.IO.StreamWriter(fileloc_user, True)
+            sw.WriteLine("1,admin,password,3")
+            sw.Close()
+            MsgBox("user.txt File Created")
+
+        End If
+
+    End Sub
